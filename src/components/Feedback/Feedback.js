@@ -1,31 +1,20 @@
-import css from "../Feedback/Feedback.module.css";
 import PropTypes from 'prop-types';
-import { Component } from "react";
+import { Component } from 'react';
+import css from './Feedback.module.css';
 
-export class Feedback extends Component() {
-
-  
-
+export class Feedback extends Component {
+  render() {
+    const { options } = this.props;
     return (
-      <div className={css.feedback}>
-        {/* Feed h1 */}
-          <h1 className={css.feedtext}>Please leave feedback</h1>
-          {/* Button list */}
-        <ul className={css.feedlist}>
-          <li>
-            <button type="button">Good</button>
-          </li>
-          <li>
-            <button type="button">Neutral</button>
-          </li>
-          <li>
-            <button type="button">Bad</button>
-          </li>
-        </ul>
+      <div className={css.buttonGroup}>
+        {options.map(el => {
+          return (
+            <button className={css.button} type="submit" key={el} onClick={() => this.props.onLeaveFeedback(el)}>
+              {el}
+            </button>
+          );
+        })}
       </div>
     );
-  }
-  
-//   User.propTypes = {
-//     stats: PropTypes.objectOf(PropTypes.number),
-//   };
+  };
+}

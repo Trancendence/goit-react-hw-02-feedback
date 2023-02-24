@@ -18,3 +18,7 @@ export class Statistic extends Component {
     );
   }
 }
+
+Statistic.propTypes = {
+  props: PropTypes.objectOf(PropTypes.string),
+}
