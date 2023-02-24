@@ -1,29 +1,20 @@
-import css from "./Statistic.module.css";
-// import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import { Component } from "react";
 
-export default function Statistic({}) {
+export class Statistic extends Component {
+  render (){
+    const props = this.props;
     return (
-      <div className={css.statistic}>
-        <h1 className={css.stattext}>Statistics</h1>
+      <>
+      <h2> Statistic </h2>
 
-        <ul className={css.stats}>
-        <li>
-          <span>Followers</span>
-          <span></span>
-        </li>
-        <li>
-          <span>Views</span>
-          <span></span>
-        </li>
-        <li>
-          <span>Likes</span>
-          <span></span>
-        </li>
-      </ul>
-      </div>
+      <p>Good: {props.good}</p>
+      <p>Neutral: {props.neutral}</p>
+      <p>Bad: {props.bad}</p>
+      <p>Total: {props.total}</p>
+      {props.total > 0 && ( <p>Positive feedback: {props.positivePercentage} %</p>
+      )}
+      </>
     );
   }
-  
-//   User.propTypes = {
-//     stats: PropTypes.objectOf(PropTypes.number),
-//   };
+}

@@ -1,7 +1,11 @@
 import css from "../Feedback/Feedback.module.css";
-// import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import { Component } from "react";
 
-export default function Feedback() {
+export class Feedback extends Component() {
+
+  
+
     return (
       <div className={css.feedback}>
         {/* Feed h1 */}
@@ -9,13 +13,13 @@ export default function Feedback() {
           {/* Button list */}
         <ul className={css.feedlist}>
           <li>
-            <button>Good</button>
+            <button type="button">Good</button>
           </li>
           <li>
-            <button>Neutral</button>
+            <button type="button">Neutral</button>
           </li>
           <li>
-            <button>Bad</button>
+            <button type="button">Bad</button>
           </li>
         </ul>
       </div>
