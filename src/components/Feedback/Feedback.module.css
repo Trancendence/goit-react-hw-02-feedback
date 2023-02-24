@@ -1,0 +1,15 @@
+/* .feedback {
+
+} */
+
+.feedtext {
+    margin-bottom: 30px;
+}
+
+.feedlist {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+}

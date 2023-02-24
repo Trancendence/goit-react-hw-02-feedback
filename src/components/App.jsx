@@ -1,16 +1,14 @@
-export const App = () => {
+import data from "../data/statistic.json";
+
+import Feedback from "./Feedback/Feedback";
+import Statistic from "./Statistic/Statistic";
+
+
+export function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+  <>
+      <Feedback/>,
+      <Statistic/>
+  </>
   );
-};
+}
