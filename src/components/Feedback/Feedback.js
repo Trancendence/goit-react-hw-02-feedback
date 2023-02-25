@@ -18,3 +18,8 @@ export class Feedback extends Component {
     );
   };
 }
+
+Feedback.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
